@@ -1,0 +1,15 @@
+install:- npm install -g typescript
+verstion :-= verstion -v
+          Version 5.7.3
+
+for run :- npm install -g ts-node
+ tsc --init
+
+//
+ compile run :- tsc first.ts
+ run :- ts-node first.ts
+
+ //any
+
+ let abc:any = 10;
+ abc=10
