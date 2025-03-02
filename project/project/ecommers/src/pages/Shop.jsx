@@ -1,10 +1,6 @@
 import React from 'react'
-// import {useSelector , useDispatch} from 'react-redux'
-import InnerBanner from '../helpers/InnerBanner'
 import Footerwhite from '../components/footerwhite'
-
-const ADD_TO_CART = 'ADD_TO_CART';
-const REMOVE_TO_CART = 'REMOVE_TO_CART';
+import { useCart } from '../context/Cartcontext'
 
 
 
@@ -22,28 +18,29 @@ const shop = [
   { image1: "https://static.wixstatic.com/media/913019_4406e0376dcb444ba3fc7c510e55727e~mv2_d_3000_3000_s_4_2.jpg/v1/fill/w_453,h_453,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/913019_4406e0376dcb444ba3fc7c510e55727e~mv2_d_3000_3000_s_4_2.jpg", title: "Cotton Blanket", price: "$25.00", colors: ["#ccc", "#dba5c8", "#d7c0d8"] },
   { image1: "https://static.wixstatic.com/media/913019_b9363e3acc744adfaa4cffd16aa57214~mv2.jpg/v1/fill/w_453,h_453,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/913019_b9363e3acc744adfaa4cffd16aa57214~mv2.jpg", title: "Slim Fit Fine-knit Turtleneck Sweater", title: "Ceramic Vase Set", price: "$25.00", colors: ["#fff", "#a748c2", "#000"] },
 ]
+
 const Shop = () => {
-  // const dispatch=useDispatch()
-  // const cart = useSelector(state => state.cart);
-  // console.log(cart);
 
-
-  // const handleAddtoCart=(item)=>{
-  //   dispatch({type:ADD_TO_CART , payload:{...item , quantity:1}})
-  // }
-
-  // const handleQuantityChange = (item, action) => {
-  //   if (action === 'increase') {
-  //     dispatch({ type: ADD_TO_CART, payload: { ...item, quantity: item.quantity + 1 } });
-  //   } else if (action === 'decrease' && item.quantity > 1) {
-  //     dispatch({ type: ADD_TO_CART, payload: { ...item, quantity: item.quantity - 1 } });
-  //   }
+  const { dispatch } = useCart();
+  // const handleQuantityChange = (item, type) => {
+  //   const updatedShop = shop.map((product) => {
+  //     if (product.title === item.title) {
+  //       return {
+  //         ...product,
+  //         quantity: type === 'increase' ? product.quantity + 1 : Math.max(1, product.quantity - 1),
+  //       };
+  //     }
+  //     return product;
+  //   });
+  //   setShop(updatedShop);
   // };
 
 
-  // const handleRemoveFormCart=(item)=>{
-  // dispatch({type:REMOVE_TO_CART , payload:item})
-  // }
+  const handleAddtoCart = (item) => {
+    console.log("Adding item:", item); 
+    dispatch({ type: "ADD_TO_CART", payload: { ...item, quantity: 1 } });
+  };
+  
   return (
 
     <div>
@@ -72,8 +69,8 @@ const Shop = () => {
                 alt={item.title}
                 className="w-full  bottom-[-60px] object-cover transition duration-300 ease-in-out "
               />
-              <div className="absolute mt-[-40px] w-full p-[0px] bg-gray-400 opacity-0 hover:opacity-100 transition-opacity duration-300">
-                <button className="text-white py-2 w-full">
+              <div className="absolute mt-[-37px] w-full p-[0px] bg-gray-400 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                <button className="text-white text-sm py-2 w-full">
                   Quick View
                 </button>
               </div>
@@ -92,17 +89,16 @@ const Shop = () => {
                 <div key={colorindex} style={{ backgroundColor: color }} className='w-[14px] h-[14px] rounded-full border hover:p-[8px] cursor-pointer hover:scale-110 transition-transform duration-200 hover:ring-1  hover:ring-black-200'></div>
               ))}
             </div>
-            <div>
-              <p className='p-[2px]  border border-black flex items-center cursor-pointer'>
-                <span className='ml-2 text-xl' onClick={() => handleQuantityChange(item, 'decrease')}>-</span>
-                <span className='mx-2 text-center w-full'>{item.quantity}</span>
-                <span className='mr-2' onClick={() => handleQuantityChange(item, 'increase')}>+</span>
-              </p>
+
+            <div className="flex items-center mt-2 border p-2 justify-between">
+              <button className="px-2" onClick={() => handleQuantityChange(item, 'decrease')}>-</button>
+              <span>{item.quantity}</span>
+              <button className="px-2" onClick={() => handleQuantityChange(item, 'increase')}>+</button>
             </div>
 
             <div>
               {/* <button className='p-2 mt-4 bg-blue-700 text-white w-full' onClick={()=>handleAddtoCart(item)}>Add to Cart</button> */}
-              <button className='p-[2px] mt-4 bg-blue-700 text-white w-full'>Add to Cart</button>
+              <button className='p-[2px] mt-4 bg-blue-700 text-white w-full' onClick={() => handleAddtoCart(item)}>Add to Cart</button>
             </div>
 
 

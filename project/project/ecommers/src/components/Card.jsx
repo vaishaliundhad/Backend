@@ -16,8 +16,8 @@ const Card = () => {
       <div className="grid grid-cols-2 gap-4 p-4">
         {cardData.map((item, index) => (
           <div key={index} className=" p-4  ">
-            <img src={item.img} alt={item.title} className="w-full h-64 object-cover " />
-            <h2 className="text-lg font-serif text-center mt-6 text-blue-800 font-bold">{item.title}</h2>
+            <img src={item.img} alt={item.title} className="w-full h-auto object-cover " />
+            <h2 className="text-lg font-serif text-center m-6 text-blue-800 font-bold ">{item.title}</h2>
           </div>
         ))}
       </div>
