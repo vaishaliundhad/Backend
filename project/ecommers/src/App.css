@@ -1,0 +1,623 @@
+import '@splidejs/react-splide/css'
+
+
+*{
+    font-family: "Albert Sans", sans-serif;
+}
+
+ :root{
+    --primary-color:#93f859;
+    --secondary-color:#f2f2f2;
+    --border-color:d1d5db ;
+ }
+.mainslider1,.mainslider2,.mainslider3{
+    position:relative;
+
+}
+.slide1,.slide2,.slide3{
+    position:absolute;
+    top:100px;
+    left:60px;
+}
+.slick-dots{
+    margin-bottom: 20px !important;
+    
+
+}
+
+.slick-dotses{
+    bottom:20px !important;
+}
+
+
+
+/* shopbycategory */
+.mainshop{
+   margin:20px;
+}
+.container{
+    margin:20px;
+  
+}
+.cardSection{
+    position:relative;  
+    top:10px;
+}
+
+.cardinfo{
+    position:absolute;
+    bottom:70px;
+    margin-left:10px;
+}
+
+.shopicons{
+    dislay:none;    
+}
+
+.shopbycategorybtn{
+  /* position:absolute; */
+  height:40px;
+  width:90px; 
+  margin-left:20px;
+  margin-top:130px;
+  margin-bottom:0px;
+  /* margin-bottom:20px; */
+  background-color:white;
+}
+.shopbycategorybtn:hover{
+    height:40px;
+    width:120px; 
+    background-color:black;
+    color:white;
+}
+/* shop catagory */
+
+/* 
+.active{
+    color:black;
+    text-decoration:underline;
+} */
+.active:hover{
+    color:black;
+    text-decoration:underline;
+}
+
+/* .btn:hover{
+    background-image: linear-gradient(90deg, red, yellow);
+    tansition-delay:2s;
+   transition: width 2s;
+} */
+
+
+/* Discount*/
+
+/* .shopbtn{
+    background-color:#93f859;
+}
+
+.shopbtn:hover{
+    background-color:#93f859;
+
+} */
+
+//shopcollection  //
+
+.shopcollection{
+    /* background-color:purple; */
+    display: flex !important;
+}
+
+
+.shopcollectionmain{
+   height:500px;
+   width:800px;  
+}
+
+.shopcollectionimg{
+    height:500px;
+    width:500px;
+}
+
+
+// login css //
+
+.login{
+    width:1000%;
+}
+
+/* .container-section{
+    padding: 50px 50px 50p 50px;
+} */
+
+.happyclient{
+    background-color:
+}
+
+/* button css */
+
+.btn{
+    border-radius:40px;
+    padding: 20px 20px;
+    font-size:15px;
+    position: relative;
+    overflow:hidden;
+    width: fit-content;
+    display:flex;
+    align-items: center;
+}
+
+.btn::after{
+    left: 120%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    transform: skew(-20deg);
+    width: 200%;
+    transition: 0.8s;
+  
+}
+
+.btn:hover::after{
+    left: -150%;
+    transition: 0.8s;
+}
+
+
+/* buton light */
+
+.btnlight{
+    background: var(--primary-color);
+}
+.btnlight::after{
+    content:"";
+    background-image: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.30), transparent);
+}
+
+
+/* Button Dark CSS */
+.btnDark{
+    background: black;
+    color: white;
+    padding:10px 20px;
+}
+.btnDark::after{
+    content:"";
+    background-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.30), transparent);
+}
+
+.innerBannerSection{
+    background-image: linear-gradient(90deg, #ffffff00, #ffb9b942, #ffffff00);
+}
+
+
+/* card css */
+
+.cardproduct .cardproductimage{
+    transition: all 2.5s ease;
+}
+.cardproduct:hover .cardproductimage{
+    transform:scale(1.1);
+}
+/* .cardproduct2 .cardproductimage2{
+    transition: all 2.5s ease;
+}
+.cardproduct:hover .cardproductimage2{
+    transform:scale(1.1);
+} */
+
+/* Shop By Category */
+
+.shopCategory .slick-dots{
+    top: -70px;
+    text-align: right;
+    z-index:0;
+}
+.shopCategory .slick-list{
+    z-index:2
+}
+/* .shopCategory .slick-dots li.slick-active button,
+.shopCategory .slick-dots li.slick-active button:hover,
+.shopCategory .slick-dots li button:hover  {
+    border: 1px solid black;
+    border-radius: 50%;
+}
+.shopCategory .slick-dots li.slick-active button:before,
+.shopCategory .slick-dots li button:hover:before{
+    opacity: 1 !important;
+    font-size:6px;
+    line-height: 22px;
+}
+.shopCategory .slick-dots li button:before{
+    font-size:8px;
+} */
+
+.shopcategory .shopimg{
+    transition: all 2.5s ease;
+}
+
+.shopcategory:hover .shopimg{
+    transform:scale(1.1);
+}
+
+.shopCategory .shopMain .shopimg{
+    transition: all 2.5s ease;
+}
+.shopCategory .shopMain:hover .shopimg{
+    transform:scale(1.1);
+}
+
+.shopbtn,
+.shopbtn:hover{
+    transition:0.5s;
+}
+.shopbtn .shopicon{
+    transition: all 0.3s ease;
+    transform: scale(0);
+   
+}
+.shopbtn:hover .shopicon{
+    transform: scale(1);
+    width: fit-content;
+    margin-inline-start: 8px;
+}
+
+.dots{
+    margin-top:100px;
+}
+
+/* discount image */
+
+/* .discount .discountimage{
+    position:relative;
+    overflow:hidden;
+    transition:0.5s;
+}
+.discount .discountimage::before{
+    content: "";
+    background:rgba(0,0,0,0.15);
+    height:0;
+    width:50%;
+    position:absolute;
+    top:0;
+    left:0;
+    transition:0.3s;
+}
+.discount .discountimage::after{
+    content: "";
+    background:rgba(0,0,0,0.15);
+    height:0;
+    width:50%;
+    position:absolute;
+    bottom:0;
+    right:0;
+    transition:0.3s;
+}
+.discount .discountimage:hover::before{
+    height:100%;
+    transition:0.3s;
+}
+.discount .discountimage:hover::after{
+   height:100%;
+    transition-delay:0.3s;
+} */
+.discoutCounter .discoutCounterImg{
+    position:relative;
+    overflow:hidden;
+    transition:0.5s;
+}
+.discoutCounter .discoutCounterImg::before{
+    content: "";
+    background:rgba(0,0,0,0.15);
+    height:0;
+    width:50%;
+    position:absolute;
+    top:0;
+    left:0;
+    transition:0.3s;
+}
+.discoutCounter .discoutCounterImg::after{
+    content: "";
+    background:rgba(0,0,0,0.15);
+    height:0;
+    width:50%;
+    position:absolute;
+    bottom:0;
+    right:0;
+    transition:0.3s;
+}
+.discoutCounter .discoutCounterImg:hover::before{
+    height:100%;
+    transition:0.3s;
+}
+.discoutCounter .discoutCounterImg:hover::after{
+   height:100%;
+    transition-delay:0.3s;
+}
+
+
+.happyclient .slick-dots{
+    bottom: 1px ! important;
+    /* left: 630px !important; */
+ }
+
+
+ /* tending css */
+
+ .main-container{ 
+    min-height: 100vh; 
+    padding: 3rem 1rem; 
+} 
+.container{ 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 1rem; 
+} 
+.title{ 
+    margin-bottom: 3rem; 
+} 
+.title h1{ 
+    text-align: center; 
+    opacity: 0.7; 
+} 
+.list-item{ 
+  background-color: #fff; 
+  border-radius: 0.4rem; 
+  overflow: hidden; 
+  box-shadow: 0 6px 12px -7px rgba(171 171 171 1); 
+  position: relative; 
+  transition: box-shadow 0.4s ease-out; 
+} 
+ 
+.list:hover{ 
+    box-shadow: 0 10px 12px -7px rgba(171 171 171 1); 
+} 
+.list-img img{ 
+     width: 100%; 
+     height: auto; 
+} 
+.list-img .rear{ 
+    opacity: 0; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    z-index: -1; 
+    transition: opacity 0.4s ease-out; 
+ 
+} 
+ 
+.list-img:hover .rear{ 
+    opacity: 1; 
+    z-index: 0; 
+} 
+.list-info{ 
+    padding: 1.2rem 1.2rem 2rem; 
+ 
+} 
+.list-grid{ 
+  display: grid; 
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 1rem; 
+}
+
+/* media navbar section */
+
+@media(min-width:310px) and (max-width:768px){
+    .nav .pages{
+         display:none;
+    }
+    
+}
+@media(max-width:310px){
+    .logo{
+        font-size:20px;
+    }
+}
+/* media query start scrollsection*/
+
+@media (max-width: 320px) {
+    .slider-container .text {
+      font-size:10px;
+    
+    }
+  }
+
+@media(min-width:310px) and (max-width:768px)  {
+    .overflow-hidden p{
+        font-size:20px;
+        margin-top:0px;
+    }
+    .overflow-hidden h1{
+        font-size:25px;
+        margin-top:0px;
+        
+    }
+    .overflow-hidden button{
+       height:50px;
+       width:210px;
+       border-radius:20px;
+       margin-top:19px;
+       margin-left:0px; 
+    }
+
+}
+
+/* close scrollsection */
+
+/* shopbycategory section */
+
+ /* @media(max-width:320px){
+    .images .cardimg{
+        width:500px;
+        
+    }
+    .images .card .shopbycategorybtn{
+        height:100%;
+        width:100%;
+        margin-top:180px;
+    
+    }
+
+    .images .img2 {
+      display:none;
+      }
+    .images .img3 {
+      display:none;
+      }
+    .images .img4 {
+      display:none;
+      }
+
+} */
+
+/* @media(max-width:768px){
+     .images .cardimg{
+      display:none;
+    } 
+    
+    .images3 .shopbycategorybtn{
+        margin-top:150px;
+        width:150px;
+        margin-bottom:-150px;
+    }
+
+     .mainshop .heading{
+        font-size:30px;
+        margin-left:35px;
+    }
+} */
+
+
+/* card section */
+
+/* @media(max-width:320px){
+   .cardproduct .cardproductimage{
+        width:100%;
+        height:300px;
+        margin-top:12px;
+    }
+    .cardproduct .cardbtn{
+        width:120px;
+        height:40px;
+        font-size:12px;
+    }
+}
+
+@media(min-width:768px){
+    .cardproduct .cardproductimage{
+        width:100%;
+        height:300px;
+        margin-top:12px;
+        border-radius:40px;
+     
+    }
+    .cardproduct .cardbtn{
+        width:120px;
+        height:40px;
+        font-size:12px;
+    }
+} */
+
+/* discount section */
+
+@media(max-width:320px){
+    .discount  .discount2{
+       width:100%;
+        
+    }
+}
+
+
+/* Trending section */
+
+/* @media(max-width:320px){
+    .list-item {
+      
+     }
+} */
+
+/* Blog post */
+
+@media(max-width:320px){
+    .mainblogimage2{
+      dislay:none;
+    }
+}
+
+/* Image Hover */
+.imgHover{
+    position:relative;
+    overflow:hidden;
+    transition:0.5s;
+}
+.imgHover::before{
+    content: "";
+    background:rgba(0,0,0,0.15);
+    height:0;
+    width:50%;
+    position:absolute;
+    top:0;
+    left:0;
+    transition:0.3s;
+}
+.imgHover::after{
+    content: "";
+    background:rgba(0,0,0,0.15);
+    height:0;
+    width:50%;
+    position:absolute;
+    bottom:0;
+    right:0;
+    transition:0.3s;
+}
+.imgHover:hover::before{
+    height:100%;
+    transition:0.3s;
+    
+}
+.imgHover:hover::after{
+   height:100%;
+    transition-delay:0.3s;
+}
+
+/* Button Dark CSS */
+.btn{
+    border-radius:40px;
+    padding: 2px 10px;
+    font-size:15px;
+    position: relative;
+    overflow:hidden;
+    width: fit-content;
+    display:flex;
+    align-items: center;
+}
+.btn::after{
+    left: 120%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    transform: skew(-20deg);
+    width: 200%;
+    transition: 0.8s;
+}
+.btn:hover::after{
+    left: -150%;
+    transition: 0.8s;
+}
+
+.btnDark{
+    background: black;
+    color: white;
+}
+.btnDark::after{
+    content:"";
+    background-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.30), transparent);
+}
+
+
+.btnLight{
+    background: var(--primary-color);
+}
+.btnLight::after{
+    content:"";
+    background-image: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.30), transparent);
+}
