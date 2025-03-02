@@ -48,50 +48,39 @@ const Shop = () => {
 
     <div>
       <div>
-        {/* <InnerBanner innerBannerTile="Shop" innerBannerBreadcrumbs="Shop" className="bg-gradient-to-r from-transparent via-[#ffb9b942] to-transparent"/> */}
+
         <div className='overflow-hidden mt-[-110px]'>
           <div className='slider-container '>
 
 
-
-            <div className=' lg:margin-left:0px p-0 m-0 mt-28 '>
-              <div className='ml-14 mr-14 bg-slate-200'>
-
+            <div className='mainslider1 lg:margin-left:0px p-0 m-0 '>
+              <div className='flex justify-center mt-4 ml-14 mr-14 '>
                 <img src="https://static.wixstatic.com/media/913019_373d99ce12724e31bd47172bec66f8db~mv2_d_5746_3508_s_4_2.jpg/v1/fill/w_1655,h_630,fp_0.50_0.50,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/913019_373d99ce12724e31bd47172bec66f8db~mv2_d_5746_3508_s_4_2.jpg" alt="" />
               </div>
-              <div className='slide1 flex justify-center items-center mt-8 mr-20 h-40 w-full'>
-                <h1 className='text-4xl font-serif text-white text-center'>Decor & Living</h1>
-              </div>
-
-
             </div>
-
-
-
-
           </div>
-
         </div>
       </div>
 
 
       <div className="grid grid-cols-4 gap-4 ml-4 mr-4">
         {shop.map((item, index) => (
-          <div key={index} className="group relative mt-8">
+          <div key={index} className=" relative mt-8">
             <div className="mt-8 ">
               <img
                 src={item.image1}
                 alt={item.title}
-                className="w-full bottom-[-60px] object-cover transition duration-300 ease-in-out group-hover:opacity-50"
+                className="w-full  bottom-[-60px] object-cover transition duration-300 ease-in-out "
               />
+              <div className="absolute mt-[-40px] w-full p-[0px] bg-gray-400 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                <button className="text-white py-2 w-full">
+                  Quick View
+                </button>
+              </div>
+
             </div>
 
             {/* Quick view button */}
-            {/* <div className="absolute  w-full p-2 bg-gray-400 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out group-hover:bottom-0">
-              <button className="text-white py-2 w-full">
-                Quick View
-              </button>
-            </div> */}
 
 
             <div className="mt-10 text-left">
