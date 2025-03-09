@@ -43,7 +43,7 @@ const Navbar2 = () => {
                     <ul className='flex gap-6 pages'>
                         <li><NavLink to="/" className='hover:text-gray-700'>Home</NavLink></li>
                         <li><NavLink to="/shop" className='hover:text-gray-700'>Shop</NavLink></li>
-                        <li><NavLink to="/contactus" className=' hover:bg-gray-100'>ContactUs</NavLink></li>
+                        {/* <li><NavLink to="/contactus" className=' hover:bg-gray-100'>ContactUs</NavLink></li> */}
                         <li><NavLink to="/payment" className=' py-2 hover:bg-gray-100'>Payment</NavLink></li>
                         <li><NavLink to="/buynow" className='hover:text-gray-700'>Buy Now</NavLink></li>
                     </ul>
@@ -58,7 +58,7 @@ const Navbar2 = () => {
                     <div className='absolute text-xs text-white mt-[-26px] ml-[12px] border px-[5px] py-[-10px] bg-red-600 rounded-[50%]'>0</div>
                 </div>
 
-                {/* Cart Icon with hover and touch effect */}
+               
                 <div 
                     className='relative' 
                     onMouseEnter={handleMouseEnter} 
@@ -76,7 +76,7 @@ const Navbar2 = () => {
                    
                     {showCart && (
                         <div className='absolute bg-white shadow-lg border overflow-y-scroll rounded-lg w-64 mt-2 right-0 p-4 max-h-96 '>
-                            <h3 className='font-bold mb-2'>Cart Items</h3>
+                            <h3 className='font-bold mb-2 bg-blue-800  text-center text-white'>Cart Items</h3>
                             {cart.length === 0 ? (
                                 <p>No items in cart</p>
                             ) : (
