@@ -1,7 +1,5 @@
 import path from 'path';
 import {IUser} from '../Models/IUser';
-
-
 const jsonfile = require('jsonfile')
 
 
@@ -23,5 +21,4 @@ export class UserUtil{
         })
     }
 }
-
 

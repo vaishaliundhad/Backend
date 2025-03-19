@@ -1,11 +1,14 @@
 import './App.css';
 import Layout from './pages/Layout';
-import { CartProvider } from './context/Cartcontext';  // ✅ सही नाम से Import करें
+import { CartProvider } from './context/Cartcontext';
+import { WishlistProvider } from './context/WishlistContext';
 
 function App() {
   return (
-    <CartProvider>  {/* ✅ सही तरीके से इस्तेमाल करें */}
-      <Layout />
+    <CartProvider>
+      <WishlistProvider>
+        <Layout />
+      </WishlistProvider>
     </CartProvider>
   );
 }

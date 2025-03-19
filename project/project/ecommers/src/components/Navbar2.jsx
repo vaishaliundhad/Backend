@@ -6,25 +6,28 @@ import { FaRegHeart } from "react-icons/fa6";
 import { RiShoppingBag2Line } from "react-icons/ri";
 import { IoListSharp } from "react-icons/io5";
 import { useCart } from "../context/Cartcontext";
+import { useWishlist } from "../context/WishlistContext";
+import {  FaHeart } from "react-icons/fa";
 
 const Navbar2 = () => {
-    const [showCart, setShowCart] = useState(false);  
-    const { cart } = useCart();  
+    const [showCart, setShowCart] = useState(false);
+    const { wishlist, toggleWishlist } = useWishlist();
+    const { cart } = useCart();
 
     const handleMouseEnter = () => {
-        setShowCart(true);  
+        setShowCart(true);
     };
 
     const handleMouseLeave = () => {
-        setShowCart(false); 
+        setShowCart(false);
     };
 
     const handleTouchStart = () => {
-        setShowCart(true); 
+        setShowCart(true);
     };
 
     const handleTouchEnd = () => {
-        setShowCart(false);  
+        setShowCart(false);
     };
 
     return (
@@ -53,18 +56,30 @@ const Navbar2 = () => {
             <div className='flex gap-3 text-2xl pr-5 mr-6'>
                 <IoSearch className='hover:text-red-500 text-xl' />
                 <NavLink to="/login" className=' max-md:hidden hover:text-red-500 text-xl'><RxPerson /></NavLink>
-                <div className='relative mr-1'>
-                    <FaRegHeart className='max-md:hidden hover:text-red-500 text-xl ' />
+                {/* <div className='relative mr-1'>
+                    <NavLink to="/wishlist"><FaRegHeart className='max-md:hidden hover:text-red-500 text-xl ' /></NavLink>
+
                     <div className='absolute text-xs text-white mt-[-26px] ml-[12px] border px-[5px] py-[-10px] bg-red-600 rounded-[50%]'>0</div>
+                </div> */}
+                <div className='relative mr-1'>
+                    <NavLink to="/wishlist">
+                        {wishlist.length > 0
+                            ? <FaHeart className='text-red-500 text-xl' />
+                            : <FaRegHeart className='hover:text-red-500 text-xl' />}
+                    </NavLink>
+
+                    <div className='absolute text-xs text-white mt-[-26px] ml-[12px] border px-[5px] py-[-10px] bg-red-600 rounded-[50%]'>
+                        {wishlist.length}
+                    </div>
                 </div>
 
-               
-                <div 
-                    className='relative' 
-                    onMouseEnter={handleMouseEnter} 
-                    onMouseLeave={handleMouseLeave}  
-                    onTouchStart={handleTouchStart}  
-                    onTouchEnd={handleTouchEnd}  
+
+                <div
+                    className='relative'
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                    onTouchStart={handleTouchStart}
+                    onTouchEnd={handleTouchEnd}
                 >
                     <NavLink to="/cart" className=' max-md:hidden hover:text-red-500 text-xl'>
                         <RiShoppingBag2Line />
@@ -73,7 +88,7 @@ const Navbar2 = () => {
                         {cart.length}
                     </div>
 
-                   
+
                     {showCart && (
                         <div className='absolute bg-white shadow-lg border overflow-y-scroll rounded-lg w-64 mt-2 right-0 p-4 max-h-96 '>
                             <h3 className='font-bold mb-2 bg-blue-800  text-center text-white'>Cart Items</h3>

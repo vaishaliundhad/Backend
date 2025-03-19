@@ -137,6 +137,7 @@ mysql> select * from client_master;
     costprice numeric(8,2)
     );
 
+
 Query OK, 0 rows affected (0.03 sec)
 
 mysql> desc product_master;

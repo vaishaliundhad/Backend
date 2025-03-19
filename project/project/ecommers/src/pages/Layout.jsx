@@ -9,6 +9,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar2 from '../components/Navbar2'
 import ContactUs from './ContactUs'
 import Cart from './Cart'
+import Wishlist from './Wishlist'
 
 
 
@@ -28,11 +29,12 @@ const Layout = () => {
         <Route path="/payment" element={<Payment />}></Route>
         <Route path="/contactus" element={<ContactUs />}></Route>
         <Route path="/login" element={<Login />}></Route>
+        <Route path="/wishlist" element={<Wishlist/>}></Route>
         <Route path="/cart" element={<Cart />}></Route>
         <Route path="*" element={<Error />}></Route>
       </Routes>
       {/* <Marquee/> */}
-    
+
     </BrowserRouter>
 
   )
