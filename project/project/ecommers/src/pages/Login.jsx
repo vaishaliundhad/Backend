@@ -7,8 +7,10 @@ const Login = () => {
                 <button className="absolute top-4 right-4 text-black text-2xl font-bold">
                     &times;
                 </button>
+                <div className="w-full">
+                    <h2 className="text-2xl font-semibold text-center sm:text-left">Login</h2>
+                </div>
 
-                <h2 className="text-2xl font-semibold mb-6">Log in</h2>
 
                 <form>
                     <div className="mb-4">
@@ -38,22 +40,25 @@ const Login = () => {
                         </a>
                     </div>
 
-                    <div className=" flex  gap-x-3 text justify-around">
-                        <button className="btn btnDark px-10 h-12  w-52 text-lg bg-black text-white py-4 rounded font-semibold pl-20">
-                            Login
-                        </button>
+                    <div className=" flex  gap-x-3 text justify-around ">
+                        <div className="flex justify-start">
+
+                            <button className="btn btnDark px-10 h-12  text-center w-52 text-lg  bg-black text-white py-4 rounded font-semibold pl-20">
+                                Login
+                            </button>
+                        </div>
                         {/* <button className='ml-auto w-4/6  bg-gray-800  text-white p-2 rounded font-semibold hover:bg-gray-900 mt-6' type="submit">Log In</button> */}
 
 
-                        <div className="flex justify-between items-center underline gap-x-0 ">
+                        <div className="flex justify-center items-center underline gap-x-0 sm:flex sm:flex-wrap">
                             <a href="#" className="text-sm text-gray-700  font-semibold hover:text-lime-500">New customer?
-                            <a
-                                href="#"
-                                className="text-sm text-gray-700 font-semibold hover:text-lime-500"
-                            >
-                                Create your account
-                               
-                            </a></a>
+                                <a
+                                    href="#"
+                                    className="text-sm text-gray-700 font-semibold hover:text-lime-500"
+                                >
+                                    Create your account
+
+                                </a></a>
                         </div>
                     </div>
                 </form>

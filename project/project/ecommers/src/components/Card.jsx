@@ -10,14 +10,14 @@ const cardData = [
 const Card = () => {
   return (
     <>
-      <div>
-        <h1 className="text-blue-800 text-center text-3xl m-6 font-serif mt-8">Defining Home Styling Since 1975</h1>
+      <div className="p-4">
+        <h1 className="text-blue-800 text-center text-xl sm:text-xl md:text-3xl lg:text-4xl sm:mt-8 font-serif mt-8 max-w-[90%] mx-auto">Defining Home Styling Since 1975</h1>
       </div>
       <div className="grid grid-cols-2 gap-4 p-4">
         {cardData.map((item, index) => (
           <div key={index} className=" p-4  ">
             <img src={item.img} alt={item.title} className="w-full h-auto object-cover " />
-            <h2 className="text-lg font-serif text-center m-6 text-blue-800 font-bold ">{item.title}</h2>
+            <h2 className="text-lg font-serif text-center mt-4 text-blue-800 font-bold sm:text-xl ">{item.title}</h2>
           </div>
         ))}
       </div>

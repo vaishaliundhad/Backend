@@ -81,7 +81,7 @@ const Navbar2 = () => {
                     onTouchStart={handleTouchStart}
                     onTouchEnd={handleTouchEnd}
                 >
-                    <NavLink to="/cart" className=' max-md:hidden hover:text-red-500 text-xl'>
+                    <NavLink to="/cart" className='hover:text-red-500 text-xl'>
                         <RiShoppingBag2Line />
                     </NavLink>
                     <div className='absolute text-xs text-white mt-[-26px] ml-[12px] border px-[5px] py-[-10px] bg-red-600 rounded-[50%]'>

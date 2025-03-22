@@ -1,19 +1,24 @@
 import { Router } from "express";
 import {
     createToDo,
-    // DeleteToDo,
     getAllToDo,
-    // updatedToDo,
     GetTodo,
+    todoDelete,
+    updateTodo,
 } from '../controller/todoController'
 
-const todoRouter:Router = Router()
 
-todoRouter.post("/inserttodos" , createToDo  ) 
-todoRouter.get("/getalltodos" , getAllToDo  ) 
-todoRouter.get("/todos/:id" ,  GetTodo) 
-// router.post("/:id" , updateToDo  ) 
-// router.post("/:id" , deleteToDo) 
+const todoRouter: Router = Router()
+
+todoRouter.post("/inserttodos", createToDo)
+todoRouter.get("/getalltodos", getAllToDo)
+todoRouter.get("/todos/:id", GetTodo)
+todoRouter.put("/updatetodo/:id", updateTodo);
+todoRouter.delete("/deletetodo/:id", todoDelete)
+
+
 
 
 export default todoRouter;
+
+

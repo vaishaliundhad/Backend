@@ -6,7 +6,7 @@ import { urlencoded } from 'body-parser';
 
 
 const hostName:string = "127.0.0.1";
-const port:number = 9988;
+const port:number = 9977;
 
 const app:Application = express();
 

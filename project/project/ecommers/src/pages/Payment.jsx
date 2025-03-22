@@ -27,13 +27,13 @@ const PaymentPage = () => {
       <div>
         <InnerBanner innerBannerTile="payment" innerBannerBreadcrumbs="payment" />
       </div>
-      <div className="max-w-3xl mx-auto p-6  rounded-lg shadow-lg shadow-gray-500 overflow-hidden mt-6">
-        <h2 className="text-3xl font-bold mb-6 text-center">Payment Information</h2>
+      <div className="max-w-md sm:max-w-sm mx-auto p-6  rounded-lg shadow-lg shadow-gray-500 overflow-hidden mt-6 bg-white sm:text-xl">
+        <h2 className="text-3xl font-bold mb-6 text-center text-gray-900">Payment Information</h2>
 
         <form onSubmit={handleSubmit}>
-          <div className="mb-4">
-            <label className="block text-black font-serif mt-6">Select Card Type*</label>
-            <div className="flex space-x-4 mt-2">
+          <div className="mb-4 text-lg">
+            <label className="block text-black font-serif ">Select Card Type*</label>
+            <div className="flex space-x-4 ">
               <button
                 type="button"
                 onClick={() => setPaymentInfo({ ...paymentInfo, cardType: 'credit' })}
@@ -51,41 +51,41 @@ const PaymentPage = () => {
             </div>
           </div>
 
-          <div className="mb-4">
-            <label className="block text-black font-serif mt-4">Card Number*</label>
+          <div className="mb-4 text-lg">
+            <label className="block text-black font-serif ">Card Number*</label>
             <input
               type="text"
               name="cardNumber"
               value={paymentInfo.cardNumber}
               onChange={handleChange}
-              className="w-full p-3 border border-gray-300 rounded-lg mt-4"
+              className="w-full p-3 border border-gray-300 rounded-lg mt-2 focus:ring-2 focus:ring-blue-500"
               placeholder="1234 5678 9876 5432"
               required
             />
           </div>
 
-          <div className="grid grid-cols-2 gap-4 mb-4">
+          <div className="grid grid-cols-2 gap-4 mb-4 text-lg">
             <div>
-              <label className="block text-black font-serif mt-4">Expiry Date*</label>
+              <label className="block text-black font-serif text-lg">Expiry Date*</label>
               <input
                 type="text"
                 name="expiryDate"
                 value={paymentInfo.expiryDate}
                 onChange={handleChange}
-                className="w-full p-3 border border-gray-300 rounded-lg mt-4"
+                className="w-full p-3 border border-gray-300 rounded-lg mt-2 focus:ring-2 focus:ring-blue-500"
                 placeholder="MM/YY"
                 required
               />
             </div>
 
-            <div>
-              <label className="block text-black font-serif mt-4">CVV*</label>
+            <div className=''>
+              <label className="block text-black font-serif text-lg">CVV*</label>
               <input
                 type="text"
                 name="cvv"
                 value={paymentInfo.cvv}
                 onChange={handleChange}
-                className="w-full p-3 border border-gray-300 rounded-lg mt-4"
+                className="w-full p-3 border  border-gray-300 rounded-lg mt-2 focus:ring-2 focus:ring-blue-500"
                 placeholder="123"
                 required
               />
@@ -93,13 +93,13 @@ const PaymentPage = () => {
           </div>
 
           <div className="mb-4">
-            <label className="block text-black font-serif mt-8">Billing Address*</label>
+            <label className="block text-black font-serif ">Billing Address*</label>
             <input
               type="text"
               name="billingAddress"
               value={paymentInfo.billingAddress}
               onChange={handleChange}
-              className="w-full p-3 border border-gray-300 rounded-lg mt-4"
+              className="w-full p-3 border border-gray-300 rounded-lg mt-2 focus:ring-2 focus:ring-blue-500"
               placeholder="123 Street, City, Country"
               required
             />
