@@ -20,18 +20,21 @@
 
 // export default useRouter
 
-import express , {Application , Request , Response , Router} from 'express';
-
- const useRouter:Router=Router();
-
- useRouter.get("/" , (request:Request , response:Response)=>{
-    response.status(200).json({msg:"welcom home"})
- })
+import { Request , Response, Router } from "express";
 
 
- useRouter.post("/insert" , (request:Request , response:Response)=>{
-    response.status(500).json({msg:"inserted data"})
- })
+const userRouter:Router= Router()
 
+userRouter.get("/home" , (request:Request , response:Response)=>{
+  response.status(200).json({
+   msg:"welcome home"
+  })
+})
 
- export default useRouter
+userRouter.post("/insert" , (request:Request , response:Response)=>{
+   response.status(200).json({
+      msg:"inser user"
+   })
+})
+
+export default userRouter

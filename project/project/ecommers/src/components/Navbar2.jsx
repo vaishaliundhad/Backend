@@ -49,6 +49,7 @@ const Navbar2 = () => {
                         {/* <li><NavLink to="/contactus" className=' hover:bg-gray-100'>ContactUs</NavLink></li> */}
                         <li><NavLink to="/payment" className=' py-2 hover:bg-gray-100'>Payment</NavLink></li>
                         <li><NavLink to="/buynow" className='hover:text-gray-700'>Buy Now</NavLink></li>
+                        <li><NavLink to="/signup" className='hover:text-gray-700'>Sign Up</NavLink></li>
                     </ul>
                 </nav>
             </div>

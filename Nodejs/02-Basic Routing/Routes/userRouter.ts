@@ -16,22 +16,42 @@
 
 // export default userRouter
 
-import { Request , Response , Router } from "express";
+// import { Request , Response , Router } from "express";
 
 
-const userRouter:Router=Router();
+// const userRouter:Router=Router();
 
-// 127.0.0.1:8899/user/home
+// // 127.0.0.1:8899/user/home
+// userRouter.get("/home" , (request:Request , response:Response)=>{
+//     response.json({
+//         msg:"welcome home"
+//     })
+// })
+// // 127.0.0.1:8899/user/insertuser
+// userRouter.post("/insertuser" , (request:Request , response:Response)=>{
+//       response.json({
+//         msg:"insrted record"
+//       })
+// })
+
+
+// export default userRouter
+
+
+import { Request , response, Response , Router } from "express";
+
+const userRouter:Router=Router()
+
 userRouter.get("/home" , (request:Request , response:Response)=>{
-    response.json({
-        msg:"welcome home"
-    })
+  response.status(200).json({
+    msg:"welcome home"
+  })
 })
-// 127.0.0.1:8899/user/insertuser
+
 userRouter.post("/insertuser" , (request:Request , response:Response)=>{
-      response.json({
-        msg:"insrted record"
-      })
+  response.status(200).json({
+    msg:"insert user"
+  })
 })
 
 

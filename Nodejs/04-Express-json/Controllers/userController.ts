@@ -8,18 +8,6 @@ import { UserUtil } from "../Util/UserUtil";
 */
 
 
-    // export const getAllUsers = async (request:Request , response:Response)=>{
-    //     try{
-    //         console.log("inside Controller:");
-    //         let userData:IUser[]= await UserUtil.getAllUserFromDB()
-            
-    //         return response.status(200).json(userData);
-
-    //     }
-    //     catch(error){
-    //         return response.status(500).json({msg:"server Error"});
-    //     }
-    // }
 
     export const getAllUsers = async (request: Request, response: Response) => {
         try {

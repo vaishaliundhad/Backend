@@ -37,7 +37,7 @@ example:- use employee
  example:- db.createCollection("emp")
 
 **************************************************To create single document insert******************************
-command:- inserOne()
+command:- insertOne()
 {}:- json format
 synatax:- db.collection_Name.insertOne({filed1:"value" , fileld2:"value"})
 
@@ -168,3 +168,6 @@ db.score.find( {$and: [{results : {$gte : 80 }}, {results:{$lt:85}}] })
  db.books.find({no_of_reviews : {$gte : 3}} , {title : 1 , no_of_reviews :1 , isbn:1 , _id:0})
 
  db.books.find({} , {title :1 , tags : 1, _id:0})
+
+
+ 

@@ -11,4 +11,4 @@ const userSchema = new mongoose.Schema<Iuser>({
 
 const userTable = mongoose.model<Iuser>('user' , userSchema)
 
-export default userTable
+export default userTable;

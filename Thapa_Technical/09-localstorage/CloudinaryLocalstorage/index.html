@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Upload image</h2>
+    <input type="file"  id="uploadInput" multiple>
+    <button onclick="uploadImage()">upload</button>
+    <h3>Saved Image from localstorage:</h3>
+    <div id="savedImages" style="display: flex; flex-wrap: wrap;"></div>
+
+    <script src="cloudinary.js"></script>
+    <script src="buffer.js"></script>
+</body>
+</html>

@@ -1,6 +1,6 @@
-import express from 'express';
+import { Router } from "express";
 
-const useRouter = express.Router();
+const useRouter=Router()
 
 useRouter.get('/home',(request,response)=>{
     response.json({

@@ -14,8 +14,19 @@ productRouter.get("/", async(request:Request , response:Response)=>{
     await productController.getAllproduct(request , response)
 })
 
-productRouter.get("/:id" , async(request:Request , response:Response)=>{
+productRouter.get("/:productid" , async(request:Request , response:Response)=>{
+  console.log("getone");
+  
   await productController.getOneUser(request , response)
+})
+
+productRouter.put("/:productid" , async(request:Request , response:Response)=>{
+ console.log("update product");
+ await productController.productUpdate(request, response)
+})
+
+productRouter.delete("/:productid" , async(request:Request , response:Response)=>{
+  await productController.deleteproduct(request, response)
 })
 
 export default productRouter

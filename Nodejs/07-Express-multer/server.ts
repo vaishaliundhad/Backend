@@ -4,8 +4,6 @@ import {log} from "console"
 import dotenv from 'dotenv'
 dotenv.config();
 
-
-
 const hostName:string ='127.0.0.1';
 const port:number =9988;
 const app:Application = express();

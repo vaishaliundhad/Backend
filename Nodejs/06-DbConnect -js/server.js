@@ -25,7 +25,7 @@ app.get("/" , (request, response) => {
 // router Configuration
 app.use("/api/users", userRouter);
 
-app.listen(Number(port), hostName , () => {
+app.listen(port, hostName , () => {
     console.log(`Express Server is started at http://${hostName}:${port}`);
 });
 

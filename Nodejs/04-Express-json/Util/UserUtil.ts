@@ -18,7 +18,7 @@ export class UserUtil{
             resolve(data);
          }
         })
-        })
+        })  
     }
 }
 

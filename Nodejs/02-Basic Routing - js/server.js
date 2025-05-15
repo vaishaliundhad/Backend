@@ -8,11 +8,11 @@ const app=express()
 
 app.get('/',(request, response)=>{
     response.json({
-        msg:"Home page"
+        msg:"welcome server"
     })
 })
 
-app.use("/api/users",useRouter)
+app.use("/user",useRouter)
 
 app.listen(port , ()=>{
     console.log(`express server is satated at http://${hostname}:${port}`);
