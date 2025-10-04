@@ -27,5 +27,5 @@ userRouter.post("/insertUser" , (request, response) => {
         msg : "Record Inserted..."
     })
 })
-
+    
 export default userRouter
